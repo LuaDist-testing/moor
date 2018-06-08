@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "moor"
-version = "v3.0-1"
+version = "v4.0-1"
 -- LuaDist source
 source = {
-  tag = "v3.0-1",
+  tag = "v4.0-1",
   url = "git://github.com/LuaDist-testing/moor.git"
 }
 -- Original source
@@ -18,14 +18,19 @@ description = {
    license = "MIT"
 }
 dependencies = {
-  "moonscript >= 0.4",
-  "inspect",
-  "linenoise"
+   "moonscript >= 0.4", "inspect", "linenoise"
 }
 build = {
    type = "make",
-   modules = {
-      build_variables = {},
-     install_variables = {}
+   modules = {},
+   install = {
+      bin = {
+         moor = "bin/moor.lua"
+      },
+      lua = {
+         ["moor.init"] = "moor/init.lua",
+         ["moor.opts"] = "moor/opts.lua",
+         ["moor.utils"] = "moor/utils.lua"
+      }
    }
 }
