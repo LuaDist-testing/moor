@@ -1,19 +1,17 @@
 #moor
 
-[![Build Status](https://api.travis-ci.org/Nymphium/moor.svg?branch=master)](https://travis-ci.org/Nymphium/moor)
-
-MoonScript REPL
+MoonScript REPL based on [mooni](https://github.com/leafo/moonscript/wiki/Moonscriptrepl)
 
 
 ## Demo
 ```
 $ moor
-moor on MoonScript version 0.4.0 on Lua 5.3
+moor on MoonScript version 0.3.1 on Lua 5.2
 > for i in *{1,2,3}
-?  for j in *{4,5,6}
-?   print j
-?  print i
-?
+>  for j in *{4,5,6}
+>   print j
+>  print i
+>
 4
 5
 6
@@ -27,44 +25,21 @@ moor on MoonScript version 0.4.0 on Lua 5.3
 6
 3
 > class Cls
-?  new: =>
-?   @a = 1
-?   @b = 2
-?   @c = 3
-?
-<1>{
-  __base = <2>{
-    __class = <table 1>,
-    __index = <table 2>
-  },
-  __init = <function 1>,
-  __name = "Cls",
-  <metatable> = {
-    __call = <function 2>,
-    __index = <table 2>
-  }
-}
+>  :a
+>  :b
+>  :c
+>  new: =>
+>   @a = 1
+>   @b = 2
+>   @c = 3
+>
+{[__base]:{[__class]:<cycle>, [__index]:<cycle>}, [__name]:"Cls", [__init]:function: 0x1e39f70}
 ```
 
-yes, dump objects with [inspect](https://github.com/kikito/inspect.lua).
+## Issue
+a lot of. `is_blockstart` function is so bad...
 
-This supports tab completion with [linenoise](https://github.com/hoelzro/lua-linenoise), and the history is stored to `~/.moor_history`
-
-## Module
-you can call REPL in your code
-
-```lua
-...
-local var = 10 -- it can be referenced by the repl
-local newenv = (require'moor')({}, _ENV)
-local hoge = newenv.foo
-...
-
-```
-
-## TODO
-- repl command (needed?)
 
 ## License
-[MIT](https://github.com/Nymphium/moor/tree/master/LICENSE)
+[MIT](https://github.com/Nymphium/moor/LICENSE)
 
