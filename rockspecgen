@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+ver=${1}
+
+luarocks write_rockspec moor "${ver}" . \
+	--license="MIT" \
+	--summary="MoonScript REPL" \
+	--homepage="https://github.com/Nymphium/moor" \
+	. \
+	"git://github.com/Nymphium/moor"
+
