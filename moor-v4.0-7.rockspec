@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "moor"
-version = "v4.0-1"
+version = "v4.0-7"
 -- LuaDist source
 source = {
-  tag = "v4.0-1",
+  tag = "v4.0-7",
   url = "git://github.com/LuaDist-testing/moor.git"
 }
 -- Original source
