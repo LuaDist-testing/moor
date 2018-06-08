@@ -1,9 +1,17 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = "moor"
 version = "v5.0-1"
+-- LuaDist source
 source = {
-   url = "git://github.com/nymphium/moor",
-   tag = "v5.0"
+  tag = "v5.0-1",
+  url = "git://github.com/LuaDist-testing/moor.git"
 }
+-- Original source
+-- source = {
+--    url = "git://github.com/nymphium/moor",
+--    tag = "v5.0"
+-- }
 description = {
    summary = "MoonScript REPL",
    detailed = "MoonScript REPL",
