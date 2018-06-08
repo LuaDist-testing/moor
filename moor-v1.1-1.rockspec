@@ -1,17 +1,9 @@
--- This file was automatically generated for the LuaDist project.
-
 package = "moor"
-version = "v1.0-2"
--- LuaDist source
+version = "v1.1-1"
 source = {
-  tag = "v1.0-2",
-  url = "git://github.com/LuaDist-testing/moor.git"
+   url = "git://github.com/Nymphium/moor",
+   tag = "v1.1"
 }
--- Original source
--- source = {
---    url = "git://github.com/Nymphium/moor",
---    tag = "v1.0"
--- }
 description = {
    summary = "MoonScript REPL",
    detailed = "MoonScript REPL based on [mooni](https://github.com/leafo/moonscript/wiki/Moonscriptrepl)",
@@ -20,11 +12,12 @@ description = {
 }
 dependencies = {
    "lua ~> 5.2",
-   "linenoise",
-   "moonscript"
+   "moonscript ~> 0.3.1",
+   "linenoise ~> 0.7"
 }
 build = {
    type = "builtin",
    modules = {},
    install = {bin = {"moor"}}
 }
+
